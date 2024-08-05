@@ -4,17 +4,17 @@
 using namespace std;
 
 int main() {
-    long long n, k;
+    string a;
 
-    cin >> n >> k;
+    cin >> a;
 
-    if (k <= (n + 1) / 2 ) {
-        cout << k*2 - 1;
+    for (int i = 0; i < a.length(); i++) {
+        if (a[i] == 'H' || a[i] == 'Q' || a[i] == '9') {
+            cout << "YES";
+            return 0;
+        }
     }
-
-    else {
-        cout << (k - (n+1) / 2) * 2;
-    }
+    cout << "NO";
 
     return 0;
 }
