@@ -8,13 +8,22 @@ int main() {
 
     cin >> a;
 
-    for (int i = 0; i < a.length(); i++) {
-        if (a[i] == 'H' || a[i] == 'Q' || a[i] == '9') {
-            cout << "YES";
-            return 0;
-        }
-    }
-    cout << "NO";
+    set<char> sset(a.begin(), a.end());
 
+    if (sset.find('H') != sset.end()) {
+        cout << "YES";
+        return 0;
+    }
+    else if (sset.find('Q') != sset.end()) {
+        cout << "YES";
+        return 0;
+    }
+    else if (sset.find('9') != sset.end()) {
+        cout << "YES";
+        return 0;
+    }
+
+
+    cout << "NO";
     return 0;
 }
